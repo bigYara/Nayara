@@ -1,9 +1,9 @@
 CREATE TABLE PIZZARIA(
-    id INT,
+    id INT;
     nome VARCHAR(50),
     endereco VARCHAR(100),
-    telefoneVARCHAR(50),
-    tamanhoVARCHAR(100),
+    telefone VARCHAR(50),
+    tamanho VARCHAR(100),
     sabor VARCHAR(50)
 
 );
