@@ -1,0 +1,49 @@
+
+    /* Estilos personalizados aqui */
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      background-color: #1d0883;
+      color: #fafafa;
+      transition: all 0.5s ease;
+    }
+
+    h2 {
+      font-family: Arial, sans-serif;
+      font-size: 28px;
+      color: #f4f6f7; 
+      transition: all 0.5s ease;
+    }
+
+    .card-title {
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      color: #eceff0;
+    }
+
+    .card-text {
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      color: #f7fcfd; 
+    }
+   
+
+    .link {
+      color: white; /* Define a cor do texto como branco */
+      text-decoration: none; /* Remove o sublinhado padrão */
+      font-weight: bold; /* Torna o texto mais em negrito */
+      /* Outros estilos que você deseja aplicar */
+  }
+  
+  .link:hover {
+      color: #e0e0e0; /* Altera a cor do texto ao passar o mouse sobre o link */
+      /* Outros estilos de hover que você deseja aplicar */
+  }
+  
+
+  .dark-mode {
+    background-color: #fffcfc;
+    color: #0a0a0a;
+    font-size: 30px;
+  }
+  
