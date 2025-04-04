@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>game</title>
+  <link href="style.css" rel="stylesheet">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<div class="game-board">
+  <img src="./clouds.png" class="clouds">
+        <img src="./mario.gif" class="mario">
+        <img src="./pipe.png" class="pipe">
+        <h1>PONTOS:<span id="pont">0</span></h1>
+     <div class="mario">
+  <div class="pipe">
+  </div>
+     </div>
+         </div>
+
+<script>
+          var pont = 0;
+    setInterval(function() {
+      pont++;
+      $("#pont").html(pont);
+    }, 500); // em ms
+</script> 
+  </body>
+     </html>

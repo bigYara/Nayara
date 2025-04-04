@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro de Palavrões</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #resultado {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Filtro de Palavrões</h2>
+<form id="formulario">
+    <textarea id="textoUsuario" placeholder="Digite seu texto aqui..."></textarea>
+    <button type="submit">Enviar</button>
+</form>
+
+<div id="resultado"></div>
+
+<script>
+    var badWords = {
+        "teste": "t****",
+        "teste1": "t*****",
+        "oteste2": "o******",
+        "Supercaligrafilistiespialidocio": "S******************************"
+    };
+
+    function changeWords(input) {
+        var text = input.split(" ");
+        for (var i = 0; i < text.length; i++) {
+            var word = text[i].toLowerCase();
+            if (badWords[word]) {
+                text[i] = badWords[word];
+            }
+        }
+        return text.join(" ");
+    }
+
+    $(document).ready(function() {
+        $('#formulario').on('submit', function(event) {
+            event.preventDefault();
+            var textoUsuario = $('#textoUsuario').val();
+            var textoFiltrado = changeWords(textoUsuario);
+            $('#resultado').text(textoFiltrado);
+        });
+    });
+</script>
+
+</body>
+</html>
