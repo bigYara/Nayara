@@ -1,0 +1,40 @@
+body, html {
+  height: 100%;
+}
+/*animaçao do fundo*/
+@keyframes slideleft {
+  from { background-position: 90000%; }
+  to { background-position: 0%; }
+}
+/*fundo*/
+.masthead {
+  background-image: url('flor.avif');
+  background-size: 99% 100vh;
+  animation: slideleft 60s infinite linear;
+  position: fixed;
+}
+/*musica*/
+.music{
+  position: fixed;
+}
+
+/*heroi*/
+#train {
+width: 295px;
+bottom: 8vh; 
+position: relative;
+margin: 300px;
+left: -340px;
+}
+/*inimigo*/
+#train2 {
+  width: 295px;
+  bottom: 8vh; 
+  position: absolute;
+  margin: 60px;
+  left: 999px;
+  margin-top: 50vh; 
+  margin-left: 80vw;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  }
