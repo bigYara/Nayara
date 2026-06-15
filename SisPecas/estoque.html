@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Estoque</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+<h1>Controle de Estoque</h1> 
+
+<div class="formulario"> 
+    <input
+        type="text"
+        id="nome"
+        placeholder="Nome da peça"
+    > 
+    <input
+        type="text"
+        id="etiqueta"
+        placeholder="Etiqueta"
+    > 
+    <input
+        type="text"
+        id="placa"
+        placeholder="Placa"
+    > 
+    <input
+        type="number"
+        id="ano"
+        placeholder="Ano"
+    > 
+    <select id="categoria"> 
+        <option>Ônibus</option> 
+        <option>Caminhão</option> 
+    </select> 
+    <input
+        type="number"
+        id="valor"
+        placeholder="Valor"
+    > 
+    <button onclick="cadastrarPeca()">
+        Salvar
+    </button> 
+</div> 
+
+<hr> 
+</div> 
+
+<hr> 
+
+<div style="margin-bottom: 20px; max-width: 400px;">
+    <input 
+        type="text" 
+        id="barraPesquisa" 
+        placeholder="🔍 Pesquisar por nome, etiqueta ou placa..." 
+        oninput="filtrarPecas()"
+        style="padding: 10px; width: 100%; border: 1px solid #ccc; border-radius: 4px;"
+    >
+</div>
+
+<table> 
+    <thead>
+
+<table> 
+    <thead> 
+        <tr> 
+            <th>Nome</th> 
+            <th>Etiqueta</th> 
+            <th>Placa</th> 
+            <th>Ano</th> 
+            <th>Categoria</th> 
+            <th>Valor</th> 
+            <th>Status</th> 
+            <th>Ações</th> 
+        </tr> 
+    </thead> 
+    <tbody id="tabelaPecas"></tbody> 
+</table> 
+
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script> 
+<script src="estoque.js"></script> 
+
+</body>
+</html>
