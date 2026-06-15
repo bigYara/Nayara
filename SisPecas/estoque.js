@@ -58,7 +58,7 @@ async function carregarPecas(){
     if (data) {
         data.forEach(peca => { //
             // Define o comportamento do botão baseado no status atual
-            const textoStatusBotao = peca.status === "Em estoque" ? "Marcar Vendido" : "Voltar p/ Estoque";
+            const textoStatusBotao = peca.status === "Em estoque" ? "Vendido" : "Estoque";
             const proximoStatus = peca.status === "Em estoque" ? "Vendido" : "Em estoque";
             const corBotaoStatus = peca.status === "Em estoque" ? "#28a745" : "#ffc107";
 
